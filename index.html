@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ubiclan test" />
+    <meta name="author" content="M. Yafie" />
+    <title>UbiScreen</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div class="d-flex" id="wrapper">
+      <!-- Side Bar -->
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-white sidebars" id="sidebar-wrapper">
+        <a href="#" class="d-flex align-items-center p-2 link-dark text-decoration-none">
+          <img src="img/logo.png" alt="" />
+        </a>
+        <ul class="nav nav-pills flex-column mt-3 mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark" aria-current="page">
+              <i class="fas fa-th-large me-2"></i>
+              Overview
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark active">
+              <i class="fas fa-desktop me-2"></i>
+              Screen
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="fab fa-youtube me-2"></i>
+              Media
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="fas fa-list me-2"></i>
+              Playlist
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="far fa-calendar-check me-2"></i>
+              Schedule
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="fas fa-chart-bar me-2"></i>
+              Statistics
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="far fa-credit-card me-2"></i>
+              Payouts
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link link-dark">
+              <i class="fas fa-cog me-2"></i>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of Side Bar -->
+
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-3 static-top">
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggle" class="btn btn-link d-md-none rounded-circle me-3">
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+            <form class="d-none d-sm-inline-block form-inline me-auto ml-md-3 ms-md-2 my-2 my-md-0 mw-100 navbar-search">
+              <div class="input-group">
+                <div class="input-group-append">
+                  <button class="btn btn-light search-border" type="button">
+                    <i class="fas fa-search fa-sm" style="color: #939496;"></i>
+                  </button>
+                </div>
+                <input type="text" class="form-control bg-white small" placeholder="Search screen, media, playlist or schedule" aria-label="Search" aria-describedby="basic-addon2">
+              </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a class="nav-link" href="#" id="searchDropdown" role="button" >
+                  <i class="fas fa-search fa-fw" style="color: #939496;"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" id="SearchXS" aria-labelledby="searchDropdown">
+                  <form class="form-inline me-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <div class="input-group-append">
+                        <button class="btn btn-light search-border" type="button">
+                          <i class="fas fa-search fa-sm" style="color: #939496;"></i>
+                        </button>
+                      </div>
+                      <input type="text" class="form-control bg-white small" placeholder="Search screen, media, playlist or schedule" aria-label="Search" aria-describedby="basic-addon2">
+                    </div>
+                  </form>
+              </div>
+              </li>
+
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link" href="#" id="alertsDropdown" role="button">
+                  <i class="far fa-bell fa-fw"></i>
+                </a>
+              </li>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button">
+                    <span class="span-profile rounded-circle text-center me-3" >J</span>   
+                    <span class="me-2 mt-2 d-none d-lg-inline text-gray-600 small">Jonh Doe <p class="fw-400 text-grey no-padding" style="margin-top: -5px;">Admin</p></span>           
+                  </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" id="logout" aria-labelledby="userDropdown">
+                  <div class="dropdown"></div>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+          <!-- Begin Page Content -->
+            <div class="container-fluid">
+                <!-- Page Heading -->
+                <div class="row mb-2">
+                    <div class="col-sm-12">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item text-primary">Videotron</li>
+                        <li class="breadcrumb-item">UB0022373 - Videotron 001</li>
+                    </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-link">
+                    <ul class="nav nav-pills mb-3 ms-4" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link link-dark active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Detail</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link link-dark" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Schedule</button>
+                        </li>
+                    </ul>                   
+              </div>
+              <div class="row ms-3">
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                      <p><span class="span-green rounded-circle" ></span>Turned on</p>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6 pe-4">
+                          <div class="mySlides mb-3">
+                            <img src="img/videotron1.png" style="width:100%">
+                          </div>
+                        
+                          <div class="mySlides mb-3">
+                            <img src="img/videotron2.png" style="width:100%">
+                          </div>
+                        
+                          <div class="mySlides mb-3">
+                            <img src="img/videotron3.png" style="width:100%">
+                          </div>
+                        
+                          <div class="row">
+                            <div class="column">
+                              <img class="demo cursor active" src="img/videotron1.png" style="width:100%" onclick="currentSlide(1)" alt="Videotron 1">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/videotron2.png" style="width:100%" onclick="currentSlide(2)" alt="Videotron 2">
+                            </div>
+                            <div class="column">
+                              <img class="demo cursor" src="img/videotron3.png" style="width:100%" onclick="currentSlide(3)" alt="Videotron 3">
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 text-left pe-4">
+                        <p style="margin-bottom: .1rem;">Videotron 001</p>
+                        <p class="fw-400">ID: UB0012341</p>
+                        <div class="row box-address me-1">
+                          <div class="col-1">
+                              <i class="fas fa-map-marker-alt" style="color: #6c757d;"></i>
+                          </div>
+                          <div class="col-11">
+                              <p class="address">Mall Taman Palem. lt 8, Cengkareng, Jakarta Barat, DKI Jakarta</p>
+                              <a class="text-primary see-maps" href="#">See on maps <i class="fas fa-chevron-right ms-3 mb-3"></i></a>
+                          </div>
+                        </div>
+                        <div class="row mt-4">
+                          <div class="col-6">
+                            Type
+                            <p class="fw-400">Videotron</p>
+                            Size
+                            <p class="fw-400">40 Inch</p>
+                          </div>
+                          <div class="col-6">
+                            Resolution
+                            <p class="fw-400">Widescreen 16:9(1920x1080)</p>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-2 mb-5"><button type="button" class="btn btn-outline-primary btn-edit"><i class="fas fa-edit"></i> Edit</button></div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row">
+                      <div class="col-2"><button class="btn btn-outline-secondary fw-600" disabled>Today</button> </div>
+                      <div class="col-10 pt-1">
+                        <button class="btn bg-transparent" style="color: #939496;" href=""><i class="fas fa-chevron-left me-3"></i></button> 
+                        November 2021 
+                        <button class="btn bg-transparent" style="color: #939496;"><i class="fas fa-chevron-right ms-3 "></i></button> </div>
+                    </div>
+
+                    <div class="row mt-3">
+                      <div class="table-responsive pe-4">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col">00:00</th>
+                              <th scope="col">00:01</th>
+                              <th scope="col">00:02</th>
+                              <th scope="col">00:03</th>
+                              <th scope="col">00:04</th>
+                              <th scope="col">00:05</th>
+                              <th scope="col">00:06</th>
+                              <th scope="col">00:07</th>
+                              <th scope="col">00:08</th>
+                              <th scope="col">00:09</th>
+                              <th scope="col">10:00</th>
+                              <th scope="col">11:00</th>
+                              <th scope="col">12:00</th>
+                            </tr>
+                          </thead>
+                          <tbody class="text-center">
+                            <tr>
+                              <th scope="row">Mon<p>1</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue<p>2</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Wed<p>3</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Thu<p>4</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fri<p>5</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sat<p>6</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sun<p>7</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Mon<p>8</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue<p>9</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Wed<p>10</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Thu<p>11</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fri<p>12</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sat<p>13</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sun<p>14</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Mon<p>15</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue<p>16</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Wed<p>17</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Thu<p>18</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fri<p>19</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sat<p>20</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sun<p>21</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            <tr>
+                              <th scope="row">Mon<p>22</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue<p>23</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Wed<p>24</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Thu<p>25</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Fri<p>26</p></th>
+                              <td class="td-m" colspan="13"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sat<p>27</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Sun<p>28</p></th>
+                              <td class="td-m" colspan="7"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 24:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="blue-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:07 - 10:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="3"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">10:00 - 24:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Mon<p>29</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue<p>30</p></th>
+                              <td class="td-m" colspan="5"> 
+                                <div class="purple-td ps-3 pt-1">Schedule #001 
+                                  <p class="fw-400">00:00 - 05:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="green-td ps-3 pt-1">Schedule #010 
+                                  <p class="fw-400">05:00 - 09:00</p> 
+                                </div>
+                               </td>
+                               <td class="td-m" colspan="4"> 
+                                <div class="orange-td ps-3 pt-1">Schedule #012 
+                                  <p class="fw-400">09:00 - 12:00</p> 
+                                </div>
+                               </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+        </div>
+            
+          
+          <!-- /.container-fluid -->
+        
+        <!-- End of Main Content -->
+      </div>
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
